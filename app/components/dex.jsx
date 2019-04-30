@@ -34,7 +34,7 @@ export function Dex ({ captures, dex, onScrollButtonClick, query, username }) {
     <div className="dex">
       <div className="wrapper">
         <ScrollComponent onClick={onScrollButtonClick} />
-        <NotificationComponent />
+        {/*<NotificationComponent />*/}
         <header>
           <HeaderComponent />
           <h3>

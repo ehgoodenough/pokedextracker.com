@@ -87,7 +87,7 @@ export class Profile extends Component {
           <div className="profile">
             <div className="wrapper">
               <header>
-                <NotificationComponent />
+                {/*<NotificationComponent />*/}
                 <HeaderComponent profile />
                 <FriendCodeComponent />
               </header>
@@ -97,7 +97,7 @@ export class Profile extends Component {
               {createDexButton}
             </div>
           </div>
-          <FooterComponent />
+          {/*<FooterComponent />*/}
         </div>
       </DocumentTitle>
     );

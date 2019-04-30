@@ -114,7 +114,7 @@ export class Tracker extends Component {
               <SearchBarComponent />
               <div className="dex-column" ref={(c) => this._tracker = c} onScroll={throttle(this.onScroll, SCROLL_DEBOUNCE)}>
                 <DexComponent onScrollButtonClick={() => this._tracker ? this._tracker.scrollTop = 0 : null} />
-                <FooterComponent />
+                {/*<FooterComponent />*/}
               </div>
             </div>
             <InfoComponent />
