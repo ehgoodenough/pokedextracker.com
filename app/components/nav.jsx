@@ -75,9 +75,9 @@ export class Nav extends Component {
     return (
       <nav>
         <Link to="/">Pokédex Tracker</Link>
-        <Link to="/donate">Donate</Link>
+        {/*<Link to="/donate">Donate</Link>
         <Link to="/login">Login</Link>
-        <Link to="/register">Register</Link>
+        <Link to="/register">Register</Link>*/}
       </nav>
     );
   }
