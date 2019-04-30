@@ -1,0 +1,7 @@
+- https for testing in extension
+- make sure that cors works x____x
+- test if the router still works
+- use config service for picking the username
+- use the game? or config service? for the dex slug.
+- make it look good! on panel.
+- hide stuff that isn't relevant.
