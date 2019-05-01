@@ -52,32 +52,9 @@ export class Nav extends Component {
       );
     }
 
-    if (session && user) {
-      return (
-        <nav>
-          <Link to="/">Pokédex Tracker</Link>
-          <Link to="/donate">Donate</Link>
-          <div className="dropdown">
-            <a href="#">{session.username} <i className="fa fa-caret-down" /></a>
-            <ul>
-              <div className="dropdown-scroll">
-                {user.dexes.map((dex) => <li key={dex.id}><Link to={`/u/${session.username}/${dex.slug}`}><i className="fa fa-th" /> {dex.title}</Link></li>)}
-              </div>
-              <li><Link to={`/u/${session.username}`}><i className="fa fa-user" /> Profile</Link></li>
-              <li><Link to="/account"><i className="fa fa-cog" /> Account Settings</Link></li>
-              <li><a onClick={this.signOut}><i className="fa fa-sign-out" /> Sign Out</a></li>
-            </ul>
-          </div>
-        </nav>
-      );
-    }
-
     return (
       <nav>
         <Link to="/">Pokédex Tracker</Link>
-        <Link to="/donate">Donate</Link>
-        <Link to="/login">Login</Link>
-        <Link to="/register">Register</Link>
       </nav>
     );
   }

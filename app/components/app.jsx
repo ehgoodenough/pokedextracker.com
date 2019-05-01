@@ -1,4 +1,4 @@
-import { Router, Route, browserHistory } from 'react-router';
+import { Router, Route, Redirect, browserHistory } from 'react-router';
 import { syncHistoryWithStore }          from 'react-router-redux';
 
 import { AccountComponent }  from './account';
@@ -17,13 +17,10 @@ const history = syncHistoryWithStore(browserHistory, Store);
 export function AppComponent () {
   return (
     <Router history={history} onUpdate={logPageView}>
-      <Route path='/' component={HomeComponent} />
-      <Route path='/login' component={LoginComponent} />
-      <Route path='/register' component={RegisterComponent} />
-      <Route path='/account' component={AccountComponent} />
+      <Redirect from='/' to={'/u/pkmncast'} />
+      <Redirect from='/index.html' to={'/u/pkmncast'} />
       <Route path='/u/:username' component={ProfileComponent} />
       <Route path='/u/:username/:slug' component={TrackerComponent} />
-      <Route path='/donate' component={DonateComponent} />
       <Route path='*' component={NotFoundComponent} />
     </Router>
   );

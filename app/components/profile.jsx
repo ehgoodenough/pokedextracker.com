@@ -87,7 +87,6 @@ export class Profile extends Component {
           <div className="profile">
             <div className="wrapper">
               <header>
-                <NotificationComponent />
                 <HeaderComponent profile />
                 <FriendCodeComponent />
               </header>
@@ -95,6 +94,7 @@ export class Profile extends Component {
               {user.dexes.map((dex) => <DexPreviewComponent key={dex.id} dex={dex} reload={() => this.reset()} />)}
 
               {createDexButton}
+              <NotificationComponent />
             </div>
           </div>
           <FooterComponent />
