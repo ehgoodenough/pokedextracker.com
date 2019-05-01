@@ -18,7 +18,7 @@ export function loadState () {
   const notif20190105 = localStorage.getItem('notif-2019.01.05') === 'true' || undefined;
   const token = localStorage.getItem('token');
   const session = tokenToUser(token);
-  const showInfo = localStorage.getItem('showInfo') === 'true' || undefined;
+  const showInfo = localStorage.getItem('showInfo') === 'true' || false;
 
   return { notification: notif20190105, token, session, showInfo };
 }
