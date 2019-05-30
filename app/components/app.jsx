@@ -12,12 +12,18 @@ import { ProfileComponent }  from './profile';
 import { RegisterComponent } from './register';
 import { Store }             from '../stores';
 import { TrackerComponent }  from './tracker';
+import { TwitchConfigComponent } from './twitch';
 import { logPageView }       from '../utils/analytics';
 
 const history = syncHistoryWithStore(browserHistory, Store);
 
+const query = require("query-string").parse(location.search);
+
 class App extends Component {
   render() {
+    if(query.mode === "config") {
+      return <TwitchConfigComponent/>
+    }
     if(this.props.twitch.isReady != true) {
       return (
         <div className="loading">Loading...</div>
