@@ -27,11 +27,13 @@
     "babel-preset-stage-0": "^6.22.0",
     "classnames": "^2.2.5",
     "css-loader": "^0.26.1",
+    "fetchquest": "^1.1.0",
     "hoist-non-react-statics": "^2.5.0",
     "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.17.4",
     "node-sass": "^4.5.0",
     "qs": "^6.3.0",
+    "query-string": "^6.5.0",
     "raven-js": "^3.10.0",
     "raw-loader": "^0.5.1",
     "react": "^15.6.2",
@@ -48,7 +50,10 @@
     "sass-loader": "^5.0.1",
     "slug": "^0.9.1",
     "style-loader": "^0.13.1",
-    "webpack": "^2.2.1"
+    "twext": "^1.2.2",
+    "urrl": "^1.0.0",
+    "webpack": "^2.2.1",
+    "yaafloop": "^1.2.0"
   },
   "devDependencies": {
     "babel-eslint": "^7.1.1",

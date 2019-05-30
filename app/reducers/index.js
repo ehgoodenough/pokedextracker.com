@@ -16,6 +16,7 @@ import { showInfo }       from './show-info';
 import { showScroll }     from './show-scroll';
 import { showShare }      from './show-share';
 import { token }          from './token';
+import { twitch }         from './twitch';
 import { users }          from './users';
 
 export const reducer = combineReducers({
@@ -35,5 +36,6 @@ export const reducer = combineReducers({
   showScroll,
   showShare,
   token,
+  twitch,
   users
 });

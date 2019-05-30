@@ -44,24 +44,24 @@ export class Nav extends Component {
     const { session, user } = this.props;
     const { loading } = this.state;
 
-    if (loading) {
-      return (
-        <nav>
-          <Link to="/">Pokédex Tracker</Link>
-        </nav>
-      );
-    }
-
     return (
       <nav>
-        <Link to="/">Pokédex Tracker</Link>
+        <Link to={this.url}>Pokédex Tracker</Link>
       </nav>
     );
   }
+  get url() {
+    if(this.props.twitch
+    && this.props.twitch.configuration
+    && this.props.twitch.configuration.username) {
+      return '/u/' + this.props.twitch.configuration.username;
+    }
+    return '/u/ashketchum10';
+  }
 }
 
-function mapStateToProps ({ session, sessionUser }) {
-  return { session, user: sessionUser };
+function mapStateToProps ({ session, sessionUser, twitch }) {
+  return { session, user: sessionUser, twitch };
 }
 
 function mapDispatchToProps (dispatch) {

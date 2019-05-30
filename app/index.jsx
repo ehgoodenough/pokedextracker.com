@@ -24,3 +24,30 @@ if (document.getElementById('root')) {
 } else {
   window.addEventListener('DOMContentLoaded', run);
 }
+
+import { setTwitch } from './actions/twitch';
+
+const TwitchExt = require("twitchext")
+TwitchExt.configuration.onChanged(() => {
+    let configuration = {}
+    if(!!TwitchExt.configuration.broadcaster) {
+        try {
+            configuration = JSON.parse(TwitchExt.configuration.broadcaster.content)
+        } catch(error) {
+            console.log(error)
+        }
+    }
+    console.log(">>>", configuration)
+    Store.dispatch(setTwitch({
+        "isReady": true,
+        "configuration": configuration
+    }))
+})
+
+// const query = require("query-string").parse(location.search);
+// console.log(query.mode === "config");
+// window.setTimeout(() => {
+//     TwitchExt.configuration.set("broadcaster", "0.0.1", JSON.stringify({
+//         "username": "pkmncast", "dexslug": "pikavee-living-dex",
+//     }))
+// }, 1000)
