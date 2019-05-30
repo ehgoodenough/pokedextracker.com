@@ -86,14 +86,11 @@ export class Profile extends Component {
           <ReloadComponent />
           <div className="profile">
             <div className="wrapper">
+              {user.dexes.map((dex) => <DexPreviewComponent key={dex.id} dex={dex} reload={() => this.reset()} />)}
+              {createDexButton}
               <header>
-                <HeaderComponent profile />
                 <FriendCodeComponent />
               </header>
-
-              {user.dexes.map((dex) => <DexPreviewComponent key={dex.id} dex={dex} reload={() => this.reset()} />)}
-
-              {createDexButton}
               <NotificationComponent />
             </div>
           </div>

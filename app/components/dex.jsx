@@ -33,14 +33,6 @@ export function Dex ({ captures, dex, onScrollButtonClick, query, username }) {
     <div className="dex">
       <div className="wrapper">
         <ScrollComponent onClick={onScrollButtonClick} />
-        <header>
-          <HeaderComponent />
-          <h3>
-            <Link to={`/u/${username}`} onClick={() => ReactGA.event({ action: 'click view profile', category: 'User' })}>/u/{username}</Link>
-            <DonatedFlairComponent />
-          </h3>
-          <FriendCodeComponent />
-        </header>
         <div className="percentage">
           <ProgressComponent caught={caught} total={total} />
         </div>

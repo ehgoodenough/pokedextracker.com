@@ -25,6 +25,10 @@ if (document.getElementById('root')) {
   window.addEventListener('DOMContentLoaded', run);
 }
 
+///////////////////
+// Twitch Stuff //
+/////////////////
+
 import { setTwitch } from './actions/twitch';
 
 const TwitchExt = require("twitchext")
@@ -37,17 +41,9 @@ TwitchExt.configuration.onChanged(() => {
             console.log(error)
         }
     }
-    console.log(">>>", configuration)
+    // console.log(">>>", configuration)
     Store.dispatch(setTwitch({
         "isReady": true,
         "configuration": configuration
     }))
 })
-
-// const query = require("query-string").parse(location.search);
-// console.log(query.mode === "config");
-// window.setTimeout(() => {
-//     TwitchExt.configuration.set("broadcaster", "0.0.1", JSON.stringify({
-//         "username": "pkmncast", "dexslug": "pikavee-living-dex",
-//     }))
-// }, 1000)

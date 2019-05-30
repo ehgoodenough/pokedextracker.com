@@ -19,9 +19,9 @@ const history = syncHistoryWithStore(browserHistory, Store);
 class App extends Component {
   render() {
     if(this.props.twitch.isReady != true) {
-        return (
-            <div/>
-        )
+      return (
+        <div className="loading">Loading...</div>
+      )
     }
     return (
       <Router history={history} onUpdate={logPageView}>

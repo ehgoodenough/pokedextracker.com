@@ -3,13 +3,13 @@
   @include flex(1 0 auto);
   @include overflow-y-scroll;
 
-  padding: 100px 0 60px;
+  padding: 60px 0 60px;
   position: relative;
   top: 70px;
 }
 
 .dex-preview {
-  margin-top: 40px;
+  margin-bottom: 40px;
 
   .percentage {
     margin-top: 0;
@@ -145,12 +145,12 @@
 
 @media (max-width: 750px) {
   .profile {
-    padding: 40px 15px 20px;
+    padding: 20px 15px 20px;
   }
 
-  .dex-preview {
-    margin-bottom: 60px;
-  }
+  // .dex-preview {
+  //   margin-bottom: 60px;
+  // }
 
   .progress-container h3 {
     font-size: 11px;
