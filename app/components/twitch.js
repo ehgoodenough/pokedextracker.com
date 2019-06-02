@@ -4,14 +4,13 @@ import TwitchExt from "twitchext"
 
 class TwitchConfig extends React.Component {
     render() {
-        // if(this.props.twitch.isReady != true) {
-        //     return (
-        //         <div className="loading">
-        //             Loading...
-        //         </div>
-        //     )
-        // }
-        this.props.twitch.configuration = this.props.twitch.configuration || {}
+        if(this.props.twitch.isReady != true) {
+            return (
+                <div className="loading">
+                    Loading...
+                </div>
+            )
+        }
         return (
             <div className="twitch-config">
                 <section className="instructions">
