@@ -91,7 +91,6 @@ export class Profile extends Component {
               <header>
                 <FriendCodeComponent />
               </header>
-              <NotificationComponent />
             </div>
           </div>
           <FooterComponent />

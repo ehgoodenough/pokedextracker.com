@@ -33,7 +33,8 @@ module.exports = {
     rules: [
       { test: /\.jsx?$/, loader: 'babel-loader', exclude: /node_modules/ },
       { test: /\.scss$/, use: ['style-loader', 'css-loader', 'sass-loader'] },
-      { test: /\.html/, loader: 'raw-loader' }
+      { test: /\.html/, loader: 'raw-loader' },
+      { test: /\.(png|jpe?g|gif|svg)/i, loader: 'file-loader', options: { name: '[name].[ext]' } }
     ]
   },
   plugins: PLUGINS

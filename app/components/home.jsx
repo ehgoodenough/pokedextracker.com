@@ -36,7 +36,7 @@ export class Home extends Component {
         <div className="home-container">
           <div className="home">
             <div className="hero">
-              <img src="/pokeball.svg" alt="Gotta catch 'em all!" />
+              <img src="./pokeball.svg" alt="Gotta catch 'em all!" />
               <h1>Pokédex Tracker</h1>
             </div>
 

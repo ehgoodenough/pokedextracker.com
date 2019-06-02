@@ -59,6 +59,7 @@
     "babel-eslint": "^7.1.1",
     "eslint": "^3.15.0",
     "eslint-plugin-react": "^6.9.0",
+    "file-loader": "^3.0.1",
     "generate-changelog": "^1.1.0",
     "webpack-dev-server": "^2.3.0"
   },
