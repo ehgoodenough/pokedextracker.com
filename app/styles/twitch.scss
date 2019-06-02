@@ -1,5 +1,68 @@
+$white: #fff;
+$blue: #1e549b;
+$great-font: "Montserrat";
+$great-size: 0.8em;
+
+@keyframes fadeout {
+    0% {opacity: 1;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
 .twitch-config {
-    input {
-        background-color: orange;
+    .options {
+        .option {
+            width: 240px;
+            margin-bottom: 1.618em;
+
+            label {
+                display: block;
+                margin-bottom: 0.2em;
+
+                .name {
+                    font-weight: bold;
+                    font-size: $great-size;
+                    font-family: $great-font;
+                    text-transform: uppercase;
+                }
+                .url {
+                    float: right;
+                    opacity: 0.75;
+                    font-size: $great-size;
+                }
+            }
+
+            input {
+                width: 100%;
+                display: block;
+                padding: 0.33em;
+
+                font: inherit;
+
+                border: 2px solid $blue;
+
+                &[type=submit] {
+                    padding: 0.5em;
+
+                    color: $white;
+                    font-weight: bold;
+                    font-size: $great-size;
+                    font-family: $great-font;
+                    text-transform: uppercase;
+
+                    cursor: pointer;
+                    background-color: $blue;
+                }
+            }
+
+            .confirmation {
+                text-align: center;
+
+                animation-name: fadeout;
+                animation-duration: 2s;
+                animation-fill-mode: forwards;
+                opacity: 1;
+            }
+        }
     }
 }
