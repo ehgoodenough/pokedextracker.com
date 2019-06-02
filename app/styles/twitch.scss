@@ -1,7 +1,12 @@
 $white: #fff;
 $blue: #1e549b;
-$great-font: "Montserrat";
+$yellow: #ffd924;
+
 $great-size: 0.8em;
+$great-font: "Montserrat";
+
+$golden-ratio: 1.618;
+$gutter: 1em * $golden-ratio;
 
 @keyframes fadeout {
     0% {opacity: 1;}
@@ -10,10 +15,12 @@ $great-size: 0.8em;
 }
 
 .twitch-config {
-    .options {
+    display: flex;
+
+    section.options {
         .option {
             width: 240px;
-            margin-bottom: 1.618em;
+            margin-bottom: $gutter;
 
             label {
                 display: block;
@@ -56,12 +63,43 @@ $great-size: 0.8em;
             }
 
             .confirmation {
+                opacity: 1;
                 text-align: center;
 
+                margin-top: 0.25em;
+
                 animation-name: fadeout;
-                animation-duration: 2s;
+                animation-duration: 3s;
                 animation-fill-mode: forwards;
-                opacity: 1;
+            }
+        }
+    }
+
+    section.instructions {
+        flex: 1;
+        margin-right: $gutter;
+
+        .step {
+            display: flex;
+            margin-bottom: $gutter;
+
+            .number {
+                width: 2em;
+                height: 2em;
+                font-size: 2em;
+                line-height: 2em;
+                text-align: center;
+                font-weight: bold;
+
+                border-radius: 100%;
+                background-color: $yellow;
+            }
+            .text {
+                align-self: center;
+                margin-left: $gutter / 2;
+                b {
+                    display: block;
+                }
             }
         }
     }

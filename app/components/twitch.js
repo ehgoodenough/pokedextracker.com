@@ -14,6 +14,29 @@ class TwitchConfig extends React.Component {
         this.props.twitch.configuration = this.props.twitch.configuration || {}
         return (
             <div className="twitch-config">
+                <section className="instructions">
+                    <div className="step">
+                        <div className="number">1</div>
+                        <div className="text">
+                            <b>Set your username!</b>
+                            This is your username on pokedextracker.com, not on twitch.tv.
+                        </div>
+                    </div>
+                    <div className="step">
+                        <div className="number">2</div>
+                        <div className="text">
+                            <b>Set a default dex. (Optional)</b>
+                            If you don't specify a default dex, we'll just show all your dexes.
+                        </div>
+                    </div>
+                    <div className="step">
+                        <div className="number">3</div>
+                        <div className="text">
+                            <b>Activate the extension!!</b>
+                            Close this configuration page, and then activate it is a panel.
+                        </div>
+                    </div>
+                </section>
                 <section className="options">
                     <form onSubmit={this.onSubmit}>
                         <div className="option">
@@ -28,15 +51,13 @@ class TwitchConfig extends React.Component {
                                 <span className="name">Dex</span>
                                 <span className="url">/u/ashketchum10/<b>living-dex</b></span>
                             </label>
-                            <input type="text" id="dexslug" name="dexslug" defaultValue={this.props.twitch.configuration.dexslug} placeholder="living-dex"/>
+                            <input type="text" id="dexslug" name="dexslug" defaultValue={this.props.twitch.configuration.dexslug}/>
                         </div>
                         <div className="option">
                             <input className="submit" type="submit" value="Save"/>
                             {this.confirmation}
                         </div>
                     </form>
-                </section>
-                <section className="instructions">
                 </section>
             </div>
         )
@@ -45,7 +66,7 @@ class TwitchConfig extends React.Component {
         if(this.state && this.state.confirmationDate) {
             return (
                 <div className="confirmation" key={this.state.confirmationDate}>
-                    Saved to your extension!
+                    Saved! Will be available on reload.
                 </div>
             )
         }
