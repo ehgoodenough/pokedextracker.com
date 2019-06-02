@@ -33,6 +33,7 @@ class App extends Component {
       <Router history={history} onUpdate={logPageView}>
         <Redirect from='/' to={this.url} />
         <Redirect from='/index.html' to={this.url} />
+        <Redirect from='*/index.html' to={this.url} />
         <Route path='/home' component={HomeComponent} />
         <Route path='/u/:username' component={ProfileComponent} />
         <Route path='/u/:username/:slug' component={TrackerComponent} />
