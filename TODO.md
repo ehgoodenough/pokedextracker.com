@@ -5,3 +5,6 @@ how to bundle and upload?
 fix font awesome :T
 darkmode
 resize steps o config page to match the avatar
+localization support?
+merge back into upstream
+mobile support checkbox - w/ ios?
