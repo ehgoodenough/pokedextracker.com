@@ -3,3 +3,5 @@ link to just open it in pokedextracker.com?
 viewer manual reload button
 how to bundle and upload?
 fix font awesome :T
+darkmode
+resize steps o config page to match the avatar
