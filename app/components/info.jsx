@@ -9,6 +9,9 @@ import { padding }                  from '../utils/formatting';
 import { retrievePokemon }          from '../actions/pokemon';
 import { setShowInfo }              from '../actions/tracker';
 
+const query = require("query-string").parse(location.search);
+const isInHostedTest = (query.state === "hosted_test" || query.state === "ready_for_review" || query.state === "in_review" || query.state === "pending_action" || query.state === "uploading" || query.state === "approved");
+
 export class Info extends Component {
 
   componentDidMount () {
@@ -68,7 +71,7 @@ export class Info extends Component {
 
           <EvolutionFamilyComponent family={pokemon.evolution_family} />
 
-          <div className="info-footer">
+          <div className={"info-footer" + (isInHostedTest ? " hidden" : "")}>
             <a href={`http://bulbapedia.bulbagarden.net/wiki/${encodeURIComponent(pokemon.name)}_(Pok%C3%A9mon)`} target="_blank" rel="noopener noreferrer" onClick={() => ReactGA.event({ action: 'open Bulbapedia link', category: 'Info', label: pokemon.name })}>Bulbapedia <i className="fa fa-long-arrow-right" /></a>
             <a href={`http://www.serebii.net/${serebiiPath}/${padding(pokemon.national_id, 3)}.shtml`} target="_blank" rel="noopener noreferrer" onClick={() => ReactGA.event({ action: 'open Serebii link', category: 'Info', label: pokemon.name })}>Serebii <i className="fa fa-long-arrow-right" /></a>
           </div>

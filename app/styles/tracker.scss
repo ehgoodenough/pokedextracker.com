@@ -195,6 +195,10 @@
   .info-footer {
     @include flexbox();
 
+    &.hidden {
+      display: none;
+    }
+
     margin-top: auto;
     border-top: 2px solid darken($brand-secondary-dark, 3%);
 
