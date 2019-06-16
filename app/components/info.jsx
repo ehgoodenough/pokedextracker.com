@@ -42,6 +42,9 @@ export class Info extends Component {
     const { dex, pokemon, showInfo } = this.props;
     const serebiiPath = dex.game.game_family.generation === 6 ? 'pokedex-xy' : 'pokedex-sm';
 
+    // Removing this for the extension :T
+    return <div/>
+
     if (!pokemon) {
       return (
         <div className={`info ${showInfo ? '' : 'collapsed'}`}>

@@ -78,9 +78,6 @@ export class Pokemon extends Component {
           <h4 dangerouslySetInnerHTML={htmlName(capture.pokemon.name)} />
           <p>#{padding(capture.pokemon.national_id, 3)}</p>
         </div>
-        <div className="set-info" onClick={this.setCurrentPokemon}>
-          <i className="fa fa-info" />
-        </div>
       </div>
     );
   }
