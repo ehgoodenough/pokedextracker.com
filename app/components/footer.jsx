@@ -1,6 +1,7 @@
 import { Link } from 'react-router';
 
 export function FooterComponent () {
+  return <div/>
   return (
     <footer className="main-footer">
       <a href="https://pokedextracker.com/blog/" className="link" target="_blank">Blog</a>

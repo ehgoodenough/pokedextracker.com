@@ -44,3 +44,15 @@ TwitchExt.configuration.onChanged(() => {
         "configuration": configuration
     }))
 })
+
+// Store.dispatch(setTwitch({
+//     "isReady": true,
+//     "configuration": {
+//         "username": "pkmncast",
+//         "dexslug": "pikavee-living-dex"
+//     }
+// }))
+
+TwitchExt.onContext((context) => {
+    document.getElementById("root").className = (context.theme === "dark") ? "isDarkMode" : ""
+})
